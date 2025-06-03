@@ -1,5 +1,3 @@
-//import { useState } from 'react'
-import './App.css'
 import { Routes, Route, Navigate } from 'react-router-dom';
 import LandingPage from './pages/common/LandingPage'
 import Header from './components/common/Header';

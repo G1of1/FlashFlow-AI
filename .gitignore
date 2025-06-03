@@ -1,0 +1,33 @@
+ === Node ===
+**/node_modules/
+**/dist/
+**/.env
+**/package-lock.json
+*.log
+
+# === TypeScript ===
+**/*.tsbuildinfo
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+
+# === IDE-specific ===
+.vscode/
+.idea/
+*.swo
+*.swp
+*.bak
+*.tmp
+
+# === Frontend-specific ===
+frontend/.vite/
+frontend/.env.local
+frontend/.env.*.local
+
+# === Backend-specific ===
+backend/eng.traineddata
+
+# === Build + Coverage ===
+coverage/
+*.lcov

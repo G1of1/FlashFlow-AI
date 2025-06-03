@@ -1,0 +1,8 @@
+{
+  "name": "flashflow-ai",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend run build && npm --prefix backend run build",
+    "start": "npm --prefix backend start"
+  }
+}

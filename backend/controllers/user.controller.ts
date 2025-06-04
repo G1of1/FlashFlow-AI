@@ -1,15 +1,12 @@
 import { User } from "../models/user.model";
 import { Notes } from "../models/notes.model";
-import { Flashcard, IFlashcard } from "../models/flashcard.model";
-import bcrypt from 'bcryptjs'
+import { Flashcard } from "../models/flashcard.model";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import e, { Request, Response } from 'express';
 import { processUploadedFile } from "../libraries/utilities/fileProcessor";
-import OpenAI from "openai";
 import dotenv from 'dotenv';
 import { FlashcardDeck } from "../models/flashcardDeck.model";
 import mongoose, { Types } from "mongoose";
-import { v2 as cloudinary } from 'cloudinary';
 dotenv.config();
 //const openai = new OpenAI({
   //apiKey: process.env.OPENAI_API_KEY,

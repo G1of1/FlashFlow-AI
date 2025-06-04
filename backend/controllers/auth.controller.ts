@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
 import bcrypt from "bcryptjs";
 import { generateTokenAndSetCookie } from "../libraries/utilities/generateToken";
 import { User,  IUser } from "../models/user.model";

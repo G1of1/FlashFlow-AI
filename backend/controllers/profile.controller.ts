@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import { User } from "../models/user.model";
 import { v2 as cloudinary } from 'cloudinary';
-import { Request, Response} from 'express';
+import { Request, Response } from 'express';
 
 export const updateProfile = async (req: Request, res: Response) : Promise<any>=> {
     try {

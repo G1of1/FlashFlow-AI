@@ -12,6 +12,6 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "types": ["vite/client", "node"],
+    "types": ["vite/client", "node"]
   }
 }

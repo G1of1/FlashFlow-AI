@@ -2,6 +2,7 @@
   "name": "flashflow-ai",
   "private": true,
   "scripts": {
+    "postinstall": "npm install --prefix frontend && npm install --prefix backend",
     "build": "npm --prefix frontend run build && npm --prefix backend run build",
     "start": "npm --prefix backend start"
   }

@@ -14,5 +14,6 @@
 - Node.js
 - TypeScript
 - TailwindCSS + Shadcn UI
-- Tanstack Query
+- Tanstack Query(Server-Side Rendering)
 - Gemini API
+- Multer and Tesseract.js(Image Upload)

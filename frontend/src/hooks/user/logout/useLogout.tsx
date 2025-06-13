@@ -28,12 +28,12 @@ const useLogout = () => {
             throw new Error(error.message)
         }
         },
-        onSuccess: async ()  => {
+        onSuccess: async (data)  => {
             await query.setQueryData(['authUser'], null);
             await query.invalidateQueries({queryKey: ['authUser']});
             toast({
                 title: "Success",
-                description: "Logged out successfully",
+                description: `${data}`,
                 duration: 2000
             })
             navigate("/login")

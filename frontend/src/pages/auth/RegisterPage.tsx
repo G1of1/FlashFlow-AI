@@ -9,7 +9,6 @@ import QRCodeModal from "@/components/auth/QRModal";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName , setLastName] = useState("");
@@ -30,11 +29,10 @@ const Register = () => {
     }
   })
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     const full = `${firstName} ${lastName}`;
-    setFullName(full);
-    register.mutate({fullName, email, password, username})
+    register.mutate({fullName: full, email, password, username})
   };
 
   return (

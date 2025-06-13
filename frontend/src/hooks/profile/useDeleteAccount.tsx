@@ -31,8 +31,9 @@ const useDeleteAccount = () => {
                 })
             }
         },
-        onSuccess: (data)=> {
-            query.invalidateQueries({queryKey: ['authUser']})
+        onSuccess: async (data)=> {
+            await query.setQueryData(['authUser'], null);
+            await query.invalidateQueries({queryKey: ['authUser']})
             toast({
                 title: "Success",
                 description:`${data.message}`,

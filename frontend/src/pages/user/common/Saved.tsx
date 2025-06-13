@@ -63,20 +63,15 @@ const Saved = () => {
               ) : (
                 notes.map((note: any) => (
                   <Link to={`/library/notes/${note._id}`} key={note._id}>
-                    <div className="bg-white dark:bg-zinc-900 shadow-lg rounded-xl p-5 flex items-center justify-between hover:-translate-y-1 hover:shadow-xl transition-transform">
+                    <div className="bg-white dark:bg-zinc-900 shadow-lg rounded-xl p-5 px-8 flex items-center justify-between hover:-translate-y-1 hover:shadow-xl transition-transform">
                       <div className="flex items-center gap-4">
-                        <FileText className="w-10 h-10 text-orange-500" />
+                        <FileText className="w-7 h-7 text-orange-500" />
                         <div>
                           <h2 className="font-semibold text-lg text-zinc-700 dark:text-zinc-200">{note.topic}</h2>
                           <p className="text-sm text-gray-500 dark:text-gray-400">Created {formatDate(note?.createdAt)}</p>
                         </div>
                         <div className="flex items-center gap-3 pl-8 mt-2">
-                            <img
-                              src={note.user.profilePic || "avatars/avatardefault.png"}
-                              alt={note.user.fullName}
-                              className="w-8 h-8 rounded-full object-cover"
-                            />
-                            <p className="text-sm font-medium hover:text-orange-500">{note.user.username}</p>
+                            <Link to={`/profile/${note.user.username}`}><p className="text-sm font-medium hover:text-orange-500">{note.user.username}</p></Link>
                           </div>
                       </div>
                     </div>
@@ -103,18 +98,13 @@ const Saved = () => {
                   <Link to={`/library/flashcards/${deck._id}`} key={deck._id}>
                     <div className="bg-white dark:bg-zinc-900 shadow-lg rounded-xl p-5 flex items-center justify-between hover:-translate-y-1 hover:shadow-xl transition-transform">
                       <div className="flex items-center gap-4">
-                        <BookOpen className="w-10 h-10 text-orange-500" />
+                        <BookOpen className="w-7 h-7 text-orange-500" />
                         <div>
                           <h2 className="font-semibold text-lg text-zinc-700 dark:text-zinc-200">{deck.topic}</h2>
                           <p className="text-sm text-gray-500 dark:text-gray-400">Created {formatDate(deck?.createdAt)}</p>
                         </div>
                         <div className="flex items-center gap-3 pl-8 mt-2">
-                            <img
-                              src={deck.user.profilePic || "avatars/avatardefault.png"}
-                              alt={deck.user.fullName}
-                              className="w-8 h-8 rounded-full object-cover"
-                            />
-                            <p className="text-sm font-medium hover:text-orange-500">{deck.user.username}</p>
+                             <Link to={`/profile/${deck.user.username}`}><p className="text-sm font-medium hover:text-orange-500">{deck.user.username}</p></Link>
                           </div>
                       </div>
                     </div>
